@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "plantName": "Snake Plant",
+    "category": "Air Purifier",
+    "price": 18,
+    "rating": 4.8,
+    "availableStock": 10,
+    "careLevel": "Easy",
+    "description": "A hardy plant that purifies indoor air and thrives in low light conditions.",
+    "image": "https://i.ibb.co.com/4w9TQH2m/igor-son-FV-Px-Cqgtwc-unsplash.jpg",
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "id": 2,
+    "plantName": "Peace Lily",
+    "category": "Flowering",
+    "price": 22,
+    "rating": 4.7,
+    "availableStock": 15,
+    "careLevel": "Moderate",
+    "description": "Elegant white blooms and glossy leaves make this a classic indoor beauty.",
+    "image": "https://i.ibb.co.com/4w9TQH2m/igor-son-FV-Px-Cqgtwc-unsplash.jpg",
+    "providerName": "Leaf & Bloom"
+  },
+  {
+    "id": 3,
+    "plantName": "Aloe Vera",
+    "category": "Medicinal",
+    "price": 16,
+    "rating": 4.6,
+    "availableStock": 20,
+    "careLevel": "Easy",
+    "description": "A succulent plant known for its healing gel and easy care routine.",
+    "image": "https://i.ibb.co.com/4w9TQH2m/igor-son-FV-Px-Cqgtwc-unsplash.jpg",
+    "providerName": "GreenCorner BD"
+  },
+  {
+    "id": 4,
+    "plantName": "Spider Plant",
+    "category": "Air Purifier",
+    "price": 15,
+    "rating": 4.5,
+    "availableStock": 25,
+    "careLevel": "Easy",
+    "description": "Great for beginners, this plant removes toxins and looks vibrant indoors.",
+    "image": "https://i.ibb.co.com/4w9TQH2m/igor-son-FV-Px-Cqgtwc-unsplash.jpg",
+    "providerName": "NatureNest"
+  },
+  {
+    "id": 5,
+    "plantName": "ZZ Plant",
+    "category": "Low Light",
+    "price": 30,
+    "rating": 4.9,
+    "availableStock": 8,
+    "careLevel": "Very Easy",
+    "description": "A tough plant that survives in low light and requires minimal water.",
+    "image": "https://i.ibb.co.com/4w9TQH2m/igor-son-FV-Px-Cqgtwc-unsplash.jpg",
+    "providerName": "EcoLeaf House"
+  },
+  {
+    "id": 6,
+    "plantName": "Money Plant (Pothos)",
+    "category": "Vine",
+    "price": 14,
+    "rating": 4.6,
+    "availableStock": 30,
+    "careLevel": "Easy",
+    "description": "A trailing vine known for bringing positivity and prosperity to homes.",
+    "image": "https://i.ibb.co.com/4w9TQH2m/igor-son-FV-Px-Cqgtwc-unsplash.jpg",
+    "providerName": "GreenAura"
+  },
+  {
+    "id": 7,
+    "plantName": "Boston Fern",
+    "category": "Air Purifier",
+    "price": 20,
+    "rating": 4.4,
+    "availableStock": 12,
+    "careLevel": "Moderate",
+    "description": "Lush green fronds that add elegance and improve air quality.",
+    "image": "https://i.ibb.co.com/4w9TQH2m/igor-son-FV-Px-Cqgtwc-unsplash.jpg",
+    "providerName": "LeafLuxe BD"
+  },
+  {
+    "id": 8,
+    "plantName": "Rubber Plant",
+    "category": "Decorative",
+    "price": 25,
+    "rating": 4.7,
+    "availableStock": 14,
+    "careLevel": "Moderate",
+    "description": "Shiny dark-green leaves that make a bold statement in modern interiors.",
+    "image": "https://i.ibb.co.com/4w9TQH2m/igor-son-FV-Px-Cqgtwc-unsplash.jpg",
+    "providerName": "The Plant Room"
+  },
+  {
+    "id": 9,
+    "plantName": "Jade Plant",
+    "category": "Succulent",
+    "price": 19,
+    "rating": 4.5,
+    "availableStock": 18,
+    "careLevel": "Easy",
+    "description": "A symbol of good luck and prosperity, ideal for sunny windowsills.",
+    "image": "https://i.ibb.co.com/4w9TQH2m/igor-son-FV-Px-Cqgtwc-unsplash.jpg",
+    "providerName": "UrbanGreen Studio"
+  }
+]
