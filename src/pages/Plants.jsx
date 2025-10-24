@@ -6,7 +6,7 @@ const Plants = () => {
     const { products } = useProducts()
     
     return (
-        <div>
+        <>
             <div className="text-center py-5">
                 <h1 className="text-3xl font-bold">All Plants</h1>
       
@@ -18,7 +18,7 @@ const Plants = () => {
                     ))
                 }
             </div>
-        </div>
+        </>
     )
   
 };

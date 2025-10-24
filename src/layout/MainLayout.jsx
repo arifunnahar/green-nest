@@ -12,24 +12,24 @@ const MainLayout = () => {
   const homePage = location.pathname === '/';
 
   return (
-    <div className="mx-auto bg-green-50 min-h-screen flex flex-col">
+    <div className="flex flex-col min-h-screen bg-green-50">
       <Navbar />
 
-      <div className="flex-1 max-w-[1200px] mx-auto">
+      <main className="flex-1 w-full px-4 sm:px-6 lg:px-8 mx-auto max-w-[1200px]">
     
         {homePage && <Hero />}
 
-      
+     
         <Outlet />
 
-     
+      
         {homePage && (
           <>
             <PlantCareTips />
             <GreenExperts />
           </>
         )}
-      </div>
+      </main>
 
       <Footer />
     </div>

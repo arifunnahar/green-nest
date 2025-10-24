@@ -3,10 +3,11 @@ import MainLayout from "../layout/MainLayout";
 import Home from "../pages/Home";
 import Plants from "../pages/Plants";
 import Profile from "../pages/Profile";
-import Login from "../pages/Login";
+
 import ProductDetails from "../pages/ProductDetails";
 import Signup from "../pages/Signup";
 import Signin from "../pages/Signin";
+import PrivateRoute from "../privateRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -15,32 +16,29 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home></Home>,
+        element: <Home/>,
     
       },
       {
         path: "/plants",
-        element: <Plants></Plants>,
+        element: <Plants/>,
       },
       {
-        path: "profile",
-        element: <Profile></Profile>,
+        path: "/profile",
+        element:<PrivateRoute> <Profile/></PrivateRoute>,
       },
       {
         path: "/signup",
-        element:<Signup></Signup>
+        element:<Signup/>,
       },
       {
         path: "/signin",
-        element: <Signin></Signin>
+        element: <Signin/>,
       },
-      {
-        path: "/login",
-        element:<Login></Login>
-      },
+    
       {
         path: "/product/:id",
-        element: <ProductDetails></ProductDetails>
+        element: <PrivateRoute><ProductDetails/></PrivateRoute>,
       }
     ],
   },
