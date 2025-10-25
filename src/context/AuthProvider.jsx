@@ -29,12 +29,12 @@ const AuthProvider = ({ children }) => {
     return updateProfile(auth.currentUser, { displayName, photoURL });
   };
 
-  // for Email verification
+  // Email verification
   const sendEmailVerificationFunc = () => {
     return sendEmailVerification(auth.currentUser);
   };
 
-  // Signin with email/password
+  // Signin with email and password
   const signInWithEmailAndPasswordFunc = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };

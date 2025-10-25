@@ -1,4 +1,4 @@
-// src/components/GreenExperts.jsx
+
 import React from "react";
 
 const experts = [
@@ -6,7 +6,7 @@ const experts = [
     id: 1,
     name: "Alice Green",
     specialization: "Indoor Plants & Succulents",
-    image: "https://i.pravatar.cc/150?img=32", // placeholder image
+    image: "https://i.pravatar.cc/150?img=32", 
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const experts = [
     id: 3,
     name: "Clara Bloom",
     specialization: "Flowering & Bonsai Plants",
-    image: "https://i.pravatar.cc/150?img=47", // updated
+    image: "https://i.pravatar.cc/150?img=47", 
   },
    {
     id: 4,
