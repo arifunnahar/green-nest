@@ -7,7 +7,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 const Hero = () => {
   return (
-    <section className="hero-slider mt-5">
+    <section className="hero-slider mt-40 md:mt-5 lg:mt-10">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={30}

@@ -1,194 +1,122 @@
-import React, { use } from "react";
-import { Link, NavLink } from "react-router-dom"; 
+import React, { useContext, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-import { toast } from "react-toastify";
-import { BeatLoader} from "react-spinners";
 
 const Navbar = () => {
-  const { user, setUser, signOutUserFunc,loading, setLoading } = use(AuthContext);
+  const { user, signOutUserFunc, setUser } = useContext(AuthContext);
+  const [showProfile, setShowProfile] = useState(false);
 
-  // signout
   const handleSignOut = () => {
     signOutUserFunc()
-      .then((res) => {
-        console.log(res);
-
-        toast.success("Signout successful");
+      .then(() => {
         setUser(null);
+        setShowProfile(false);
       })
-
-      .catch((e) => {
-        toast.error(e.message);
-      });
+      .catch((e) => console.log(e.message));
   };
 
-  console.log(user);
-
-
   return (
-    <div className="navbar bg-base-100 shadow-sm">
-  
-      <div className="navbar-start">
-        
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </div>
+    <nav className="flex items-center justify-between bg-base-100 shadow-sm p-4 relative">
+      {/* Logo */}
+      <Link to="/" className="text-2xl font-bold text-green-600">
+        GreenNest
+      </Link>
 
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+      {/* Links */}
+      <ul className="flex gap-4">
+        <li>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "text-purple-600 underline" : "hover:underline"
+            }
           >
-            <li>
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-purple-600  underline underline-offset-4"
-                    : "hover:underline"
-                }
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/plants"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-purple-600  underline underline-offset-4"
-                    : "hover:underline"
-                }
-              >
-                Plants
-              </NavLink>
-            </li>
-            {
-              user && (
-                
-            <li>
-              <NavLink
-                to="/profile"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-purple-600 underline underline-offset-4"
-                    : "hover:underline"
-                }
-              >
-                My Profile
-              </NavLink>
-            </li>
-              )}
-          </ul>
-        </div>
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/plants"
+            className={({ isActive }) =>
+              isActive ? "text-purple-600 underline" : "hover:underline"
+            }
+          >
+            Plants
+          </NavLink>
+        </li>
+      </ul>
 
-        <Link to="/" className="flex items-center gap-2">
-          <div className="text-2xl font-bold text-green-600">GreenNest</div>
-        </Link>
-      </div>
+      {/* Right side: User info  */}
+      <div className="flex items-center gap-4">
+        {!user && (
+          <>
+            <Link to="/signin" className="btn btn-outline">
+              Login
+            </Link>
+            <Link to="/signup" className="btn btn-primary">
+              Signup
+            </Link>
+          </>
+        )}
 
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 text-md font-medium">
-          <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-purple-600  underline underline-offset-4"
-                  : "hover:underline"
-              }
+        {user && (
+          <div className="relative">
+            {/* Avatar button */}
+            <button
+              onClick={() => setShowProfile(!showProfile)}
+              className="flex items-center gap-2  focus:outline-none"
             >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/plants"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-purple-600  underline underline-offset-4"
-                  : "hover:underline"
-              }
-            >
-              Plants
-            </NavLink>
-          </li>
-
-          {
-            user && (
-              <li>
-            <NavLink
-              to="/profile"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-purple-600  underline underline-offset-4"
-                  : "hover:underline"
-              }
-            >
-              My Profile
-            </NavLink>
-          </li>
-            )
-          }
-        </ul>
-      </div>
-
-      
- {loading ? (
-        <div className="navbar-end pr-4">
-          <BeatLoader color="#e74c3c" />
-        </div>
-      ) : user ? (
-        <div className="navbar-end flex items-center gap-3 pr-4">
-          <div className="dropdown dropdown-end">
-            <div tabIndex={0} className=" m-1 p-0">
+             <ul className="flex flex-col items-center gap-2 mt-3 mb-4">
+                  <li>
+                   
+                 <Link
+                        to="/myprofile"
+                        className="hover:text-purple-600 font-bold hover:underline"
+                        onClick={() => setShowProfile(false)}
+                      >
+                        My Profile
+                      </Link>
+                  </li>
+                </ul>
               <img
-                className="h-15 w-15 rounded-full"
-                src={user?.photoURL || "https://via.placeholder.com/88"}
-                alt={user?.displayName || "User"}
+                src={user.photoURL || "https://via.placeholder.com/40"}
+                alt={user.displayName || "User"}
+                className="w-10 h-10 rounded-full"
               />
-            </div>
-            <ul
-              tabIndex={-1}
-              className="dropdown-content menu bg-base-100 rounded-box w-52 p-4 shadow-sm"
-            >
-              <li>
-                <h2 className="text-xl font-semibold">{user?.displayName}</h2>
-                <p className="text-sm ">{user?.email}</p>
-              </li>
-              <li>
+           
+            </button>
+
+            {/* Profile dropdown */}
+            {showProfile && (
+              <div className="absolute right-0 mt-4 w-64 bg-base-100 shadow-lg rounded-lg p-4 z-50">
+                <div className="flex flex-col items-center mb-2">
+                  
+                 
+
+                  <img
+                    src={user.photoURL || "https://via.placeholder.com/80"}
+                    alt={user.displayName || "User"}
+                    className="w-20 h-20 rounded-full mb-2"
+                  />
+                  
+                  <h2 className="text-lg font-semibold">{user.displayName}</h2>
+                  <p className="text-gray-500">{user.email}</p>
+                </div>
+
+               
+
                 <button
                   onClick={handleSignOut}
-                  className="btn bg-green-600 w-full rounded-md text-white mt-2"
+                  className="btn bg-green-600 text-white w-full"
                 >
-                  Signout
+                  Sign Out
                 </button>
-              </li>
-            </ul>
+              </div>
+            )}
           </div>
-        </div>
-      ) : (
-        <div className="navbar-end flex items-center gap-3">
-          <Link to="/signin" className="btn btn-success text-white">
-            Signin
-          </Link>
-        </div>
-      )}
-
-    </div>
+        )}
+      </div>
+    </nav>
   );
 };
 
