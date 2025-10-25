@@ -46,7 +46,7 @@ const Signup = () => {
             photoURL,
           });
 
-          // Send verification email 
+          // Send verification 
           sendEmailVerificationFunc();
 
           toast.success("Signup successful! Welcome to GreenNest");
