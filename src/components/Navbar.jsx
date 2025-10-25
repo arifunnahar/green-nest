@@ -25,7 +25,7 @@ const Navbar = () => {
           GreenNest
         </Link>
 
-        {/* Desktop */}
+        {/* Desktop view*/}
         <ul className="hidden md:flex gap-4">
           <li>
             <NavLink
@@ -53,10 +53,10 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           {!user && (
             <>
-              <Link to="/signin" className="btn btn-outline   hidden md:inline">
+              <Link to="/signin" className="btn btn-outline p-2  hidden md:inline">
                 Login
               </Link>
-              <Link to="/signup" className="btn btn-primary hidden md:inline">
+              <Link to="/signup" className="btn btn-primary  p-2 hidden md:inline">
                 Signup
               </Link>
             </>
