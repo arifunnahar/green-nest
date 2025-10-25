@@ -6,7 +6,7 @@ const PlantCareTips = () => {
   { 
     id: 1, 
     title: "Watering", 
-    description: "Water your plants regularly, making sure the soil stays moist but not soggy. Overwatering can harm roots, so always check the soil before watering to ensure healthy growth." 
+    description: "Water your plants regularly, making sure the soil stays moist but not soggy. Over watering can harm roots, so always check the soil before watering to ensure healthy growth." 
   },
   { 
     id: 2, 

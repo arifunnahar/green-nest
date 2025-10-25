@@ -89,7 +89,7 @@ const ProductDetails = () => {
             </div>
           </div>
 
-          {/* Book Consultation Button */}
+          {/* Book  Button */}
           <div className="text-center">
             <button
               className="bg-green-600 hover:bg-green-800 text-white font-semibold px-6 md:px-8 py-2 md:py-3 rounded-full shadow-md"
