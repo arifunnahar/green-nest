@@ -23,6 +23,7 @@ const Signin = () => {
   const emailRef = useRef(null);
 
   const from = location.state?.from || "/";
+ 
 
   
   useEffect(() => {
@@ -36,17 +37,14 @@ const Signin = () => {
     e.preventDefault();
     const email = e.target.email?.value;
     const password = e.target.password?.value;
-
+ 
     setLoading(true);
     signInWithEmailAndPasswordFunc(email, password)
       .then((res) => {
         setLoading(false);
 
        
-        if (!res.user?.emailVerified) {
-          toast.error("Your email is not verified. You cannot login.");
-          return;
-        }
+       
 
         //verified users can login
         setUser(res.user);
@@ -66,10 +64,7 @@ const Signin = () => {
       .then((res) => {
         setLoading(false);
 
-        if (!res.user?.emailVerified) {
-          toast.error("Your Google email is not verified. You cannot login.");
-          return;
-        }
+        
 
         setUser(res.user);
         toast.success("Google signin successful");
@@ -124,7 +119,7 @@ const Signin = () => {
                 />
                 <span
                   onClick={() => setShow(!show)}
-                  className="absolute right-[25px] top-[35px] text-gray-400 cursor-pointer z-50"
+                  className="absolute right-[8px] top-[35px] text-gray-400 cursor-pointer z-50"
                 >
                   {show ? <FaEye /> : <IoEyeOff />}
                 </span>
