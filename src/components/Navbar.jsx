@@ -53,7 +53,7 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           {!user && (
             <>
-              <Link to="/signin" className="btn btn-outline hidden md:inline">
+              <Link to="/signin" className="btn btn-outline   hidden md:inline">
                 Login
               </Link>
               <Link to="/signup" className="btn btn-primary hidden md:inline">
