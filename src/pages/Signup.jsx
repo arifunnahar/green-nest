@@ -51,7 +51,7 @@ const Signup = () => {
 
           toast.success("Signup successful! Welcome to GreenNest");
 
-          // Navigate to home page
+       
           navigate("/");
         });
       })

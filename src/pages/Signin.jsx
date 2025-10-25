@@ -48,7 +48,7 @@ const Signin = () => {
 
         //verified users can login
         setUser(res.user);
-        toast.success("Signin successful");
+        toast.success("login successful");
         navigate(from, { replace: true });
       })
       .catch((e) => {
