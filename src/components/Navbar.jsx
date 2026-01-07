@@ -86,7 +86,7 @@ const Navbar = () => {
                     <ul className="flex flex-col items-center gap-2 mt-3 mb-4">
                       <li>
                         <Link
-                          to="/myprofile"
+                          
                           className="hover:text-purple-600 font-bold hover:underline"
                           onClick={() => setShowProfile(false)}
                         >
@@ -99,7 +99,7 @@ const Navbar = () => {
                   </div>
                   <button
                     onClick={handleSignOut}
-                    className="btn bg-green-600 text-white w-full"
+                    className="btn bg-blue-600 text-white  w-full"
                   >
                     Logout
                   </button>

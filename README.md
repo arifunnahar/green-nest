@@ -1,16 +1,13 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  ------About Green Nest-----
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Green Nest is a modern plant and tree selling website.
+This website offers a wide variety of plants, fruit trees, and indoor plants.
+Green Nest promotes an eco-friendly and green lifestyle.
+Customers can easily order trees and plants online.
+Each plant comes with detailed information and care instructions.
+The website has a clean, attractive, and user-friendly design.
+Online payment and fast delivery options are available.
+Green Nest helps people create a greener environment by planting more trees.
+It is suitable for both home and office decoration.
+Overall, Green Nest makes buying plants simple and convenient.

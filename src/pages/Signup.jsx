@@ -49,7 +49,7 @@ const Signup = () => {
           // Send verification 
           sendEmailVerificationFunc();
 
-          toast.success("Signup successful! Welcome to GreenNest");
+          toast.success("Signup successful! Welcome to TravelEase");
 
        
           navigate("/");
